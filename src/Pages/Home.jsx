@@ -33,12 +33,6 @@ const Home = () => {
                         <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-300">Management Made Simple</span>
                     </h1>
 
-                    {/* Subtitle */}
-                    <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                        Protect your digital life with our secure password management solution.
-                        Easy to use, impossible to crack.
-                    </p>
-
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         {isAuthenticated ? (
