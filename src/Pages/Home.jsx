@@ -4,15 +4,15 @@ const Home = () => {
     const isAuthenticated = localStorage.getItem('token');
 
     return (
-        <div className="min-h-[calc(100vh-72px)] flex flex-col">
+        <div className="min-h-[calc(100vh-72px)] min-h-[calc(100dvh-72px)] flex flex-col px-4 sm:px-6 lg:px-8">
             {/* Hero Section */}
-            <section className="flex-1 flex items-center justify-center px-4 py-12">
-                <div className="max-w-4xl mx-auto text-center animate-slide-up">
+            <section className="flex-1 flex items-center justify-center py-8 sm:py-12 lg:py-16">
+                <div className="w-full max-w-4xl mx-auto text-center animate-slide-up">
                     {/* Icon */}
-                    <div className="mb-8 inline-flex">
-                        <div className="w-24 h-24 bg-gradient-to-br from-red-500 to-red-700 rounded-3xl flex items-center justify-center animate-float shadow-lg shadow-red-500/30">
+                    <div className="mb-6 sm:mb-8 inline-flex">
+                        <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-green-500 to-green-700 rounded-2xl sm:rounded-3xl flex items-center justify-center animate-float shadow-lg shadow-green-500/30">
                             <svg
-                                className="w-14 h-14 text-white"
+                                className="w-10 h-10 sm:w-14 sm:h-14 text-white"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -28,31 +28,33 @@ const Home = () => {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2">
                         Secure Password
-                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-300">Management Made Simple</span>
                     </h1>
 
+
                     {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2">
                         {isAuthenticated ? (
-                            <div className="glass-card px-8 py-4 rounded-2xl">
-                                <div className="flex items-center space-x-3">
-                                    <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
-                                    <span className="text-gray-200 font-medium">You are securely logged in</span>
+                            <div className="glass-card px-6 sm:px-8 py-4 rounded-2xl">
+                                <div className="flex items-center justify-center space-x-3">
+                                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                                    <span className="text-gray-200 font-medium text-sm sm:text-base">
+                                        You are securely logged in
+                                    </span>
                                 </div>
                             </div>
                         ) : (
                             <>
                                 <Link
                                     to="/register"
-                                    className="btn-primary px-8 py-4 text-white rounded-2xl font-semibold text-lg shadow-2xl"
+                                    className="btn-primary px-6 sm:px-8 py-3 sm:py-4 text-white rounded-xl sm:rounded-2xl font-semibold text-base sm:text-lg shadow-2xl active:scale-[0.98] transition-transform"
                                 >
                                     Get Started
                                 </Link>
                                 <Link
                                     to="/login"
-                                    className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white rounded-2xl font-semibold text-lg backdrop-blur-sm transition-all duration-300 border border-white/10 hover:border-red-500/30"
+                                    className="px-6 sm:px-8 py-3 sm:py-4 bg-white/5 hover:bg-white/10 text-white rounded-xl sm:rounded-2xl font-semibold text-base sm:text-lg backdrop-blur-sm transition-all duration-300 border border-white/10 hover:border-green-500/30 active:scale-[0.98]"
                                 >
                                     Sign In
                                 </Link>
@@ -62,11 +64,10 @@ const Home = () => {
                 </div>
             </section>
 
-
             {/* Footer */}
-            <footer className="px-4 py-6 text-center">
-                <p className="text-gray-500 text-sm">
-                    Built with React & Tailwind CSS
+            <footer className="py-4 sm:py-6 text-center">
+                <p className="text-gray-500 text-xs sm:text-sm">
+                    Built with React & Tailwind CSS 
                 </p>
             </footer>
         </div>

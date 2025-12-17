@@ -2,17 +2,17 @@ import { Link } from 'react-router-dom';
 
 const PageNotFound = () => {
     return (
-        <div className="min-h-[calc(100vh-72px)] flex items-center justify-center px-4 py-12">
+        <div className="min-h-[calc(100dvh-72px)] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
             <div className="max-w-lg mx-auto text-center animate-slide-up">
                 {/* 404 Number */}
-                <div className="relative mb-8">
-                    <h1 className="text-[150px] md:text-[200px] font-bold text-white/5 leading-none select-none">
+                <div className="relative mb-6 sm:mb-8">
+                    <h1 className="text-[100px] sm:text-[150px] md:text-[200px] font-bold text-white/5 leading-none select-none">
                         404
                     </h1>
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-24 h-24 bg-gradient-to-br from-red-500 to-red-700 rounded-3xl flex items-center justify-center animate-float shadow-lg shadow-red-500/30">
+                        <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-green-500 to-green-700 rounded-2xl sm:rounded-3xl flex items-center justify-center animate-float shadow-lg shadow-green-500/30">
                             <svg
-                                className="w-14 h-14 text-white"
+                                className="w-10 h-10 sm:w-14 sm:h-14 text-white"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -29,20 +29,20 @@ const PageNotFound = () => {
                 </div>
 
                 {/* Message */}
-                <div className="glass-card rounded-3xl p-8 md:p-10 shadow-2xl">
-                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                <div className="glass-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4">
                         Page Not Found
                     </h2>
-                    <p className="text-gray-400 mb-8 leading-relaxed">
+                    <p className="text-gray-400 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
                         Oops! The page you're looking for doesn't exist or has been moved.
                         Don't worry, let's get you back on track.
                     </p>
 
                     {/* Action Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                         <Link
                             to="/"
-                            className="btn-primary px-8 py-3.5 text-white rounded-xl font-semibold inline-flex items-center justify-center space-x-2"
+                            className="btn-primary px-6 sm:px-8 py-3 sm:py-3.5 text-white rounded-xl font-semibold inline-flex items-center justify-center space-x-2 text-base sm:text-lg active:scale-[0.98] transition-transform"
                         >
                             <svg
                                 className="w-5 h-5"
@@ -61,7 +61,7 @@ const PageNotFound = () => {
                         </Link>
                         <button
                             onClick={() => window.history.back()}
-                            className="px-8 py-3.5 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center space-x-2 border border-white/10 hover:border-red-500/30"
+                            className="px-6 sm:px-8 py-3 sm:py-3.5 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center space-x-2 border border-white/10 hover:border-green-500/30 text-base sm:text-lg active:scale-[0.98]"
                         >
                             <svg
                                 className="w-5 h-5"
@@ -82,10 +82,10 @@ const PageNotFound = () => {
                 </div>
 
                 {/* Helpful Links */}
-                <div className="mt-8 flex flex-wrap justify-center gap-6">
+                <div className="mt-6 sm:mt-8 flex flex-wrap justify-center gap-4 sm:gap-6">
                     <Link
                         to="/login"
-                        className="text-gray-500 hover:text-red-400 transition-colors inline-flex items-center space-x-2"
+                        className="text-gray-500 hover:text-green-400 transition-colors inline-flex items-center space-x-2 text-sm sm:text-base"
                     >
                         <svg
                             className="w-4 h-4"
@@ -104,7 +104,7 @@ const PageNotFound = () => {
                     </Link>
                     <Link
                         to="/register"
-                        className="text-gray-500 hover:text-red-400 transition-colors inline-flex items-center space-x-2"
+                        className="text-gray-500 hover:text-green-400 transition-colors inline-flex items-center space-x-2 text-sm sm:text-base"
                     >
                         <svg
                             className="w-4 h-4"
